@@ -78,3 +78,13 @@ To learn more about React Native, take a look at the following resources:
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
 a
+instalar librerias 
+npm install @react-navigation/native
+npm install @react-navigation/stack
+npm install --save react-native-gesture-handler
+npm install react-native-safe-area-context
+npm install react-native-screens
+npm install react-native-paper
+
+Version de node 19.9.0
+Version de chocolatey 2.2.2
