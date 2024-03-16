@@ -2,12 +2,14 @@ import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import { PaperProvider, Text } from 'react-native-paper'
 
+
 const Offers = () => {
   return (
     <PaperProvider>
         <View>
             <Text style = {styles.title}>Ofestas y promociones</Text>
         </View>
+        
     </PaperProvider>
   )
 }

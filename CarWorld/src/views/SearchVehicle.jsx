@@ -1,13 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, View } from 'react-native'
-import { PaperProvider, Text } from 'react-native-paper'
+import { Button, PaperProvider, Text, TextInput, Modal, Portal } from 'react-native-paper'
 
-const SearchVehicle = () => {
+//import globalStyles from '../styles/globalStyles';
+
+
+const SearchVehicle = ({navigation}) => {
+  const [visible, setVisible] = React.useState(false);
+
+  const showModal = () => setVisible(true);
+  const hideModal = () => setVisible(false);
+  const containerStyle = {backgroundColor: 'white', padding: 20};
   return (
     <PaperProvider>
-        <View>
-            <Text style = {styles.title}>Busqueda de vehiculos</Text>
-        </View>
+        
+      <Text style={styles.title}>Busqueda de vehiculos</Text>
+      <Text >Ingrese el modelo del vehiculo</Text>
+      <TextInput
+        label="Buscar modelo del vehiculo" />
+      <Portal>
+        <Modal Visible={visible} onDismiss={hideModal} contentContainerStyle={containerStyle}>
+          <Text>Example Modal</Text>
+        </Modal>
+      </Portal>
+      <Button style={{ marginTop: 30 }} onPress={showModal}>Buscar</Button>
+        
     </PaperProvider>
   )
 }
