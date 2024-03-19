@@ -9,11 +9,9 @@ const VehicleList = ({vehicles}) => {
         {vehicles.map((vehicle)=>(
             <Vehicle
             key={vehicle.id}
-            urlImagen={vehicle.imageUrl}
+            urlImagen={vehicle.imagenUrl}
             description={vehicle.description}
-            price = {vehicle.price}
-
-        />
+            price = {vehicle.price}/>
             ))}
     </ScrollView>
   )

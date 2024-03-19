@@ -1,14 +1,14 @@
 import React from 'react'
-import {  StyleSheet, View } from 'react-native'
+import {  StyleSheet } from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler';
 import { Button, PaperProvider,Text } from 'react-native-paper'
-import { black } from 'react-native-paper/lib/typescript/styles/themes/v2/colors';
 
 const Home = ({navigation}) => {
     const handleSubmit = () => {
     };
   return (
     <PaperProvider>
-        <View>
+        <ScrollView>
             <Text style={styles.title} >Concesionario</Text>
             <Text style={styles.titleMenu} >Menu</Text>
             <Button mode = "contained" style={styles.button} onPress={()=>{navigation.navigate('Catalog')}}>Catalogo de vehiculos</Button>
@@ -19,7 +19,7 @@ const Home = ({navigation}) => {
             <Button mode = "contained" style={styles.button} onPress={()=>{navigation.navigate('HistoricService')}}>Historial de servicios</Button>
             <Button mode = "contained" style={styles.button} onPress={()=>{navigation.navigate('Offers')}}>Ofertas y promociones</Button>
             <Button mode = "contained" style={styles.button} onPress={()=>{navigation.navigate('Contact')}}>Contacto</Button>
-        </View>
+        </ScrollView>
     </PaperProvider>
   )
 }

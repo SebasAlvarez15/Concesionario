@@ -11,6 +11,8 @@ import RepairCar from './src/views/RepairCar'
 import HistoricService from './src/views/HistoricService'
 import Offers from './src/views/Offers'
 import Contact from './src/views/Contact'
+import RegisterContact from './src/views/RegisterContact'
+import RegisterServices from './src/views/RegisterServices'
 
 const Stack = createStackNavigator();
 const App = () => {
@@ -27,6 +29,8 @@ const App = () => {
           <Stack.Screen name = "HistoricService" component={HistoricService}/>
           <Stack.Screen name = "Offers" component={Offers}/>
           <Stack.Screen name = "Contact" component={Contact}/>
+          <Stack.Screen name = "RegisterContact" component={RegisterContact}/>
+          <Stack.Screen name = "RegisterServices" component={RegisterServices}/>
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>
